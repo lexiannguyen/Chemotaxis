@@ -1,29 +1,33 @@
  //declare bacteria variables here 
- Bacteria[] colony;
+Bacteria [] colony = new Bacteria[10];
+  
+ int mx = 0;
+ int my = 0;
  void setup()   
  {     
    //initialize bacteria variables here
-   
-   size(400, 400);
- }   
- void draw()   
- {    
-   // make an array of bacteria
-   colony = new Bacteria[6];
    for(int i = 0; i < colony.length;i++){
     colony[i] = new Bacteria();
    }
+   size(400, 400);
+ }   
+ void draw()   
+ { 
+   //ellipse(mx, my, 20, 20);
+   background(51);
+   // make an array of bacteria
    //move and show the bacteria   
-
    for(int i = 0; i<colony.length;i++){
-    //colony[i].move();
+    colony[i].move();
     colony[i].show();
     
    }
  }  
- void mousePressed(){
-  redraw(); 
+ void mousePressed() {
+  mx = mouseX;
+  my = mouseY;
  }
+
  class Bacteria    
  {     
    //(x, y, color)
@@ -36,9 +40,10 @@
    }
    //show
    void show(){
-     //int[] colors = { };
-     //int col = (colors[(int)(Math.random()*colors.length)]);
-     //fill(color(col));
+     /*int[] colors = { };
+     int col = (colors[(int)(Math.random()*colors.length)]);
+     fill(color(col)); */
+     
      ellipse(myX, myY, 50, 50);
    }
    //move
