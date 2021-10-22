@@ -63,14 +63,14 @@ Bacteria [] colony = new Bacteria[20];
     
    }
    void getCloser() {
-     if(mouseX - myX <= 0 && dist(mouseX, mouseY, myX, myY)<300){
-       myX -= (int)(Math.random()*5+6);
-   } else if(mouseX - myX > 0 && dist(mouseX, mouseY, myX, myY)<300){
-       myX += (int)(Math.random()*5+6);
-   } else if(mouseY - myY <= 0 && dist(mouseX, mouseY, myX, myY)<300){
-        myY = myY- (int)(Math.random()*5+6); 
-   } else if(mouseY - myY > 0 && dist(mouseX, mouseY, myX, myY)<300){
-        myY += (int)(Math.random()*5+6); 
+     if(mouseX - myX <= 0 && dist(mouseX, mouseY, myX, myY)<300){ //mouse on left
+       myX = myX + (int)(Math.random()*5)-3   //-3, -2, -1, 0, 1, 
+   } else if(mouseX - myX > 0 && dist(mouseX, mouseY, myX, myY)<300){ //mouse on right
+       myX += (int)(Math.random()*5)-1; //-1, 0, 1, 2, 3
+   } else if(mouseY - myY <= 0 && dist(mouseX, mouseY, myX, myY)<300){ // mouse above
+        myY = myY + (int)(Math.random()*5)-3; 
+   } else if(mouseY - myY > 0 && dist(mouseX, mouseY, myX, myY)<300){ //mouse below
+        myY += (int)(Math.random()*5)-1; 
    }
    }
  } 
