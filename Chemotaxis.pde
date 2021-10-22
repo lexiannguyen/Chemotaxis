@@ -58,8 +58,8 @@ Bacteria [] colony = new Bacteria[20];
    }
    //move
    void move() {
-     myX = myX + (int)(Math.random()*3-1);
-     myY = myY + (int)(Math.random()*3-2);
+     myX = myX + (int)(Math.random()*3-1); //x moves either -1, 0, or 1
+     myY = myY + (int)(Math.random()*3-1); //y moves either -1, 0, or 1
     
    }
    void getCloser() {
