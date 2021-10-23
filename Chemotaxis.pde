@@ -66,6 +66,12 @@ Bacteria [] colony = new Bacteria[20];
    void eaten() {
     if (dist(mouseX, mouseY, myX, myY) < 20) {
       background(51);
+      fill(255, 123, 46);
+      ellipse(mouseX, mouseY, 80, 80);
+   fill(0, 0, 0);
+   triangle(mouseX-22, mouseY, mouseX-18, mouseY-15, mouseX-15, mouseY);
+   triangle(mouseX+22, mouseY, mouseX+18, mouseY-15, mouseX+15, mouseY);
+   ellipse(mouseX, mouseY+ 20, 20, 20);
       noStroke();
       fill(51);
       triangle(myX-25, myY+25, myX, myY-25, myX+25, myY+25);
