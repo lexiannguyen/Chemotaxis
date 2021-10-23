@@ -24,7 +24,7 @@ Bacteria [] colony = new Bacteria[20];
    //move and show the bacteria   
    for(int i = 0; i<colony.length;i++){
     colony[i].move();
-    colony[i].eaten();
+    //colony[i].eaten();
     colony[i].getCloser();
     colony[i].show();
     
@@ -63,7 +63,7 @@ Bacteria [] colony = new Bacteria[20];
      myY = myY + (int)(Math.random()*3-1); //y moves either -1, 0, or 1
     
    }
-   void eaten() {
+  /* void eaten() {
     if (dist(mouseX, mouseY, myX, myY) < 20) {
       background(51);
       fill(255, 123, 46);
@@ -76,7 +76,7 @@ Bacteria [] colony = new Bacteria[20];
       fill(51);
       triangle(myX-25, myY+25, myX, myY-25, myX+25, myY+25);
     }
-   }
+   } */
    void getCloser() {
      if(mouseX - myX <= 0 && dist(mouseX, mouseY, myX, myY)<300){ //mouse on left
        myX = myX + (int)(Math.random()*5)-3   //-3, -2, -1, 0, 1, 
